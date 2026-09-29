@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen AI | Global Gastronomic Discovery & News Portal</title>
+    <meta name="description" content="Um portal global vivo de descoberta gastronômica que transforma sinais do mundo em histórias, universos, referências e experiências.">
+    <!-- Meta Pixel e Tracking preservados conforme diretrizes -->
+    <meta property="og:image" content="https://files.manuscdn.com/webdev_screenshots/2026/09/26/C9xWPUxQomz74JB7cnCfCV.png?x-oss-process=image/resize,w_1200/crop,h_630,x_0,y_0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kitchenDark: '#0b0f19',
+                        kitchenCard: '#131c2e',
+                        kitchenAccent: '#f59e0b',
+                        kitchenRed: '#ef4444'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-kitchenDark text-slate-100 font-sans antialiased selection:bg-kitchenAccent selection:text-black">
+
+    <!-- Header / Global Discovery Navigation -->
+    <header class="sticky top-0 z-50 bg-kitchenDark/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-8">
+                <a href="#" class="text-2xl font-black tracking-wider text-white flex items-center gap-2">
+                    <i class="fa-solid fa-utensils text-kitchenAccent"></i> KITCHEN<span class="text-kitchenAccent">AI</span>
+                </a>
+                <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+                    <a href="#mundo" class="hover:text-kitchenAccent transition">MUNDO</a>
+                    <a href="#em-alta" class="hover:text-kitchenAccent transition">EM ALTA</a>
+                    <a href="#curiosidades" class="hover:text-kitchenAccent transition">CURIOSIDADES</a>
+                    <a href="#comida" class="hover:text-kitchenAccent transition">COMIDA</a>
+                    <a href="#chefs" class="hover:text-kitchenAccent transition">CHEFS & RESTAURANTES</a>
+                    <a href="#aprendizado" class="hover:text-kitchenAccent transition">APRENDIZADO</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button onclick="toggleSearch()" class="p-2 text-slate-300 hover:text-white transition">
+                    <i class="fa-solid fa-search text-lg"></i>
+                </button>
+                <a href="https://pay.hotmart.com/X107733413H" target="_blank" class="bg-kitchenAccent hover:bg-amber-600 text-black font-bold px-5 py-2.5 rounded-full text-sm transition shadow-lg shadow-amber-500/20">
+                    ACESSAR APP (R$ 29,99)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Modal Overlay -->
+    <div id="searchModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-kitchenCard max-w-2xl w-full p-6 rounded-2xl border border-slate-700 shadow-2xl relative">
+            <button onclick="toggleSearch()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-compass text-kitchenAccent"></i> Explorar KSEG (Knowledge Graph)
+            </h3>
+            <div class="relative">
+                <input type="text" placeholder="Busque por ingredientes, receitas, chefs, técnicas ou países..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 pl-12 text-white focus:outline-none focus:border-kitchenAccent">
+                <i class="fa-solid fa-search absolute left-4 top-4 text-slate-500"></i>
+            </div>
+            <div class="mt-4 text-xs text-slate-400 flex flex-wrap gap-2">
+                <span class="bg-slate-800 px-2.5 py-1 rounded-md">#Fermentação</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded-md">#TrufaBranca</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded-md">#CozinhaFrancesa</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded-md">#SousVide</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero / Streaming Discovery Banner -->
+    <section class="relative pt-12 pb-20 overflow-hidden bg-gradient-to-b from-kitchenCard to-kitchenDark border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block bg-amber-500/10 text-kitchenAccent border border-amber-500/20 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
+                    PROJETO OMEGA • DEPLOY 2026.09.28
+                </span>
+                <h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-6 leading-tight">
+                    O ecossistema vivo de inteligência gastronômica global.
+                </h1>
+                <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                    Transformando sinais do mundo em histórias, universos, referências e experiências imersivas guiadas por múltiplos modelos de IA e pelo protocolo Kamillo Santos.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#em-alta" class="bg-kitchenAccent text-black font-bold px-8 py-4 rounded-xl hover:bg-amber-600 transition flex items-center gap-2">
+                        <i class="fa-solid fa-play"></i> EXPLORAR AGORA
+                    </a>
+                    <a href="https://pay.hotmart.com/X107733413H" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold px-8 py-4 rounded-xl border border-slate-700 transition">
+                        ASSINAR EXPERIÊNCIA COMPLETA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Netflix Inspired Dynamic Rows / Clusters -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+        
+        <!-- Row 1: Agora & Em Alta -->
+        <section id="em-alta">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold tracking-tight flex items-center gap-2">
+                    <i class="fa-solid fa-fire text-kitchenRed"></i> Em Alta no Radar Global
+                </h2>
+                <span class="text-sm text-slate-400">Atualizado em tempo real</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-kitchenCard rounded-2xl overflow-hidden border border-slate-800 hover:border-kitchenAccent transition group cursor-pointer">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-kitchenCard to-transparent z-10"></div>
+                        <span class="absolute top-3 left-3 z-20 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md text-xs font-bold text-kitchenAccent">CIÊNCIA & TÉCNICA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2 group-hover:text-kitchenAccent transition">A Química Secreta da Maturação do Queijo</h3>
+                        <p class="text-sm text-slate-400 line-clamp-2">Como micro-organismos específicos transformam texturas e criam perfis aromáticos complexos.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-kitchenCard rounded-2xl overflow-hidden border border-slate-800 hover:border-kitchenAccent transition group cursor-pointer">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-kitchenCard to-transparent z-10"></div>
+                        <span class="absolute top-3 left-3 z-20 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md text-xs font-bold text-kitchenAccent">TENDÊNCIA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2 group-hover:text-kitchenAccent transition">O Renascimento da Culinária de Fogo de Chão</h3>
+                        <p class="text-sm text-slate-400 line-clamp-2">O ressurgimento de técnicas ancestrais em cozinhas contemporâneas de alta performance.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-kitchenCard rounded-2xl overflow-hidden border border-slate-800 hover:border-kitchenAccent transition group cursor-pointer">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-kitchenCard to-transparent z-10"></div>
+                        <span class="absolute top-3 left-3 z-20 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md text-xs font-bold text-kitchenAccent">GASTRONOMIA & VIAGEM</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2 group-hover:text-kitchenAccent transition">Rotas de Especiarias Escondidas no Norte da África</h3>
+                        <p class="text-sm text-slate-400 line-clamp-2">Uma jornada profunda pelos mercados tradicionais e segredos de blends ancestrais.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-kitchenCard rounded-2xl overflow-hidden border border-slate-800 hover:border-kitchenAccent transition group cursor-pointer">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-kitchenCard to-transparent z-10"></div>
+                        <span class="absolute top-3 left-3 z-20 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md text-xs font-bold text-kitchenAccent">INOVAÇÃO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2 group-hover:text-kitchenAccent transition">Inteligência Artificial Aplicada à Harmonização</h3>
+                        <p class="text-sm text-slate-400 line-clamp-2">Como algoritmos mapeiam compostos moleculares para criar combinações perfeitas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Row 2: Temporadas e Universos Editoriais -->
+        <section id="curiosidades">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold tracking-tight flex items-center gap-2">
+                    <i class="fa-solid fa-clapperboard text-kitchenAccent"></i> Temporadas & Universos Conectados
+                </h2>
+                <a href="#" class="text-sm text-kitchenAccent hover:underline">Ver todas as temporadas</a>
+            </div>
+            <div class="bg-gradient-to-r from-amber-950/40 to-slate-900 border border-amber-500/30 rounded-3xl p-8 relative overflow-hidden">
+                <div class="max-w-xl">
+                    <span class="bg-kitchenAccent text-black text-xs font-extrabold px-3 py-1 rounded-full uppercase">Temporada Especial</span>
+                    <h3 class="text-3xl font-black mt-4 mb-3">Os Segredos da Fermentação Viva</h3>
+                    <p class="text-slate-300 mb-6 leading-relaxed">
+                        Uma imersão completa de 10 episódios explorando origem, ciência, micro-organismos, técnicas de laboratório e impacto cultural pelo mundo.
+                    </p>
+                    <button class="bg-white text-black font-bold px-6 py-3 rounded-xl hover:bg-slate-200 transition">
+                        Iniciar Temporada
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Site vs App Bridge Architecture -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 py-8 border-t border-b border-slate-800">
+            <div class="bg-kitchenCard p-8 rounded-2xl border border-slate-800">
+                <div class="text-kitchenAccent font-bold text-sm tracking-wider uppercase mb-2">MODELO PÚBLICO</div>
+                <h3 class="text-2xl font-black mb-4">SITE = DESCUBRA</h3>
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    Portal global vivo de descoberta gastronômica. Curiosidades, tendências, universos editoriais, referências e mapas interativos abertos para alimentar sua curiosidade.
+                </p>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><i class="fa-solid fa-check text-kitchenAccent mr-2"></i> Inteligência multimodelo integrada</li>
+                    <li><i class="fa-solid fa-check text-kitchenAccent mr-2"></i> Grafos de conhecimento dinâmicos (KSEG)</li>
+                    <li><i class="fa-solid fa-check text-kitchenAccent mr-2"></i> Relatórios e referências validadas</li>
+                </ul>
+            </div>
+            <div class="bg-gradient-to-br from-amber-950/20 to-kitchenCard p-8 rounded-2xl border border-amber-500/30">
+                <div class="text-kitchenAccent font-bold text-sm tracking-wider uppercase mb-2">CAMADA PRIVADA</div>
+                <h3 class="text-2xl font-black mb-4">APP = FAÇA</h3>
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    A experiência completa de inteligência culinária e execução. Receitas adaptadas, planejamento inteligente de cozinha, comunidade e ferramentas avançadas.
+                </p>
+                <a href="https://pay.hotmart.com/X107733413H" target="_blank" class="inline-block bg-kitchenAccent hover:bg-amber-600 text-black font-bold px-6 py-3 rounded-xl transition shadow-lg">
+                    Adquirir Acesso Total (R$ 29,99/mês)
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-kitchenCard border-t border-slate-800 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-slate-400 text-sm">
+            <div>
+                <p class="font-bold text-white mb-1">KITCHEN_AI_GLOBAL_OMEGA • Production Ready</p>
+                <p>Metodologia proprietária #KamilloSantosProtocol. Todos os direitos reservados.</p>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="#" class="hover:text-white transition">Termos</a>
+                <a href="#" class="hover:text-white transition">Privacidade</a>
+                <a href="https://pay.hotmart.com/X107733413H" target="_blank" class="text-kitchenAccent hover:underline">Membership</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSearch() {
+            const modal = document.getElementById('searchModal');
+            modal.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
